@@ -1,19 +1,19 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_news/helpers/news.dart';
+import 'package:flutter_news/helpers/news_service.dart';
 import 'package:flutter_news/models/article_model.dart';
 
 import 'components/news_card.dart';
 
-class Home extends StatefulWidget {
+class Blog extends StatefulWidget {
   final String category;
-  const Home({super.key, required this.category});
+  const Blog({super.key, required this.category});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<Blog> createState() => _BlogState();
 }
 
-class _HomeState extends State<Home> {
+class _BlogState extends State<Blog> {
   final List<ArticleModel> _articles = [];
 
   late bool _loading;
@@ -55,7 +55,7 @@ class _HomeState extends State<Home> {
             _controller.position.maxScrollExtent
     ) {
       setState(() {
-        _isLoadMoreRunning = true; // Display a progress indicator at the bottom
+        _isLoadMoreRunning = true;
       });
       await _getNews();
       setState(() {
@@ -73,7 +73,6 @@ class _HomeState extends State<Home> {
             child: CircularProgressIndicator(),
           ) : Column(
             children: [
-              /// Cards
               Expanded(
                 child: ListView.builder(
                     itemCount: _articles.length,

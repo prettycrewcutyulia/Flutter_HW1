@@ -4,7 +4,7 @@ import 'package:flutter_news/helpers/data.dart';
 import 'package:flutter_news/models/category_model.dart';
 import 'package:flutter_news/theme/theme_model.dart';
 import 'package:flutter_news/views/components/category_card.dart';
-import 'package:flutter_news/views/home.dart';
+import 'package:flutter_news/views/blog.dart';
 import 'package:provider/provider.dart';
 
 class NewsAppBar extends StatefulWidget {
@@ -28,7 +28,7 @@ class _NewsAppBarState extends State<NewsAppBar> {
     tabsCategories = categories.map(
             (e) => Tab(icon: CategoryCard(imageUrl: e.imageUrl, categoryName: e.categoryName))
     ).toList();
-    windowCategories = categories.map((e) => Home(category: e.categoryName)).cast<Widget>().toList();
+    windowCategories = categories.map((e) => Blog(category: e.categoryName)).cast<Widget>().toList();
   }
 
   final IconData _iconLight = Icons.wb_sunny;
