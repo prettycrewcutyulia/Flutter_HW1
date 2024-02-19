@@ -21,7 +21,6 @@ class NewsService {
       url = 'https://newsapi.org/v2/top-headlines?country=$locale&category=$category&page=$_page&apiKey=8c3a56f82dd74f559c5798d462558f9c';
     }
      Uri uri = Uri.parse(url);
-    print(url);
 
      var response = await http.get(uri);
 
