@@ -1,6 +1,7 @@
 # Flutter_HW1
  Мобильное приложение для просмотра новостных статей с двумя экранами
- APK файл : 
+ 
+ APK файл : https://github.com/prettycrewcutyulia/Flutter_HW1/blob/main/app-release.apk
 
 # Основные критерии:
  ## Основной экран:
