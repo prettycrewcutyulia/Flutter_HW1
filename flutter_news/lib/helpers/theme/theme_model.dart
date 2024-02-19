@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_news/theme/theme_preference.dart';
+import 'package:flutter_news/helpers/theme/theme_preference.dart';
 
 class ThemeModel extends ChangeNotifier {
   late bool _isDark;
   late ThemePreferences _preferences;
+
   bool get isDark => _isDark;
 
   ThemeModel() {
