@@ -16,7 +16,9 @@ class ArticleView extends StatelessWidget {
         title:
             Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
           const Text('Flutter'),
-          Text('News'.tr(), style: const TextStyle(color: Colors.blue))
+          Text('News'.tr(),
+              style: TextStyle(
+                  color: Theme.of(context).textSelectionTheme.selectionColor))
         ]),
         centerTitle: true,
         elevation: 0.0,
@@ -35,24 +37,15 @@ class ArticleView extends StatelessWidget {
                     fit: BoxFit.cover)),
             Text(
               article.title,
-              style: const TextStyle(
-                  color: Colors.black87,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold),
+              style: Theme.of(context).textTheme.titleLarge,
             ),
             Text(
               article.description,
-              style: const TextStyle(
-                  color: Colors.black,
-                  fontSize: 18,
-                  fontWeight: FontWeight.normal),
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
             TextButton(
               style: TextButton.styleFrom(
-                textStyle: const TextStyle(
-                    color: Colors.blue,
-                    decoration: TextDecoration.underline,
-                    fontSize: 20),
+                textStyle: Theme.of(context).textTheme.labelLarge,
               ),
               onPressed: () async {
                 String url = article.url;

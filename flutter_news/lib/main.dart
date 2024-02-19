@@ -27,14 +27,27 @@ class MainApp extends StatefulWidget {
 }
 
 ThemeData _light = ThemeData(
-    brightness: Brightness.light,
-    textSelectionTheme:
-        const TextSelectionThemeData(selectionColor: Colors.blue));
+  brightness: Brightness.light,
+  textSelectionTheme: const TextSelectionThemeData(selectionColor: Colors.blue),
+  textTheme: const TextTheme(
+    titleLarge: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+    bodyLarge: TextStyle(fontSize: 18, fontWeight: FontWeight.normal),
+    labelLarge: TextStyle(
+        color: Colors.blue, decoration: TextDecoration.underline, fontSize: 20),
+  ),
+);
 
 ThemeData _dark = ThemeData(
-    brightness: Brightness.dark,
-    textSelectionTheme:
-        const TextSelectionThemeData(selectionColor: Colors.purpleAccent));
+  brightness: Brightness.dark,
+  textSelectionTheme:
+      const TextSelectionThemeData(selectionColor: Colors.purpleAccent),
+  textTheme: const TextTheme(
+    titleLarge: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+    bodyLarge: TextStyle(fontSize: 18, fontWeight: FontWeight.normal),
+    labelLarge: TextStyle(
+        color: Colors.blue, decoration: TextDecoration.underline, fontSize: 20),
+  ),
+);
 
 class _MainAppState extends State<MainApp> {
   @override
