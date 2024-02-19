@@ -6,21 +6,20 @@ import 'package:url_launcher/url_launcher.dart';
 
 class ArticleView extends StatelessWidget {
   final ArticleModel article;
+
   const ArticleView({super.key, required this.article});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                const Text('Flutter'),
-                Text('News'.tr(), style: const TextStyle(color: Colors.blue))
-              ]
-          ),
-          centerTitle: true,
-          elevation: 0.0,
+        title:
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+          const Text('Flutter'),
+          Text('News'.tr(), style: const TextStyle(color: Colors.blue))
+        ]),
+        centerTitle: true,
+        elevation: 0.0,
       ),
       body: Container(
         alignment: Alignment.center,

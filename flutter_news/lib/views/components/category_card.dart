@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 
 class CategoryCard extends StatelessWidget {
   final String imageUrl, categoryName;
-  const CategoryCard({super.key, required this.imageUrl, required this.categoryName});
+
+  const CategoryCard(
+      {super.key, required this.imageUrl, required this.categoryName});
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +19,7 @@ class CategoryCard extends StatelessWidget {
                   imageUrl: imageUrl,
                   width: 120,
                   height: 60,
-                  fit: BoxFit.cover)
-          ),
+                  fit: BoxFit.cover)),
           Container(
             alignment: Alignment.center,
             width: 120,
@@ -27,11 +28,13 @@ class CategoryCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(6),
               color: Colors.black45,
             ),
-            child: Text(categoryName.tr(), style: const TextStyle(
-                color: Colors.white,
-                fontSize: 15,
-                fontWeight: FontWeight.bold
-            ),),
+            child: Text(
+              categoryName.tr(),
+              style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold),
+            ),
           )
         ],
       ),
